@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger 69 | Sabor Legendario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <a href="https://wa.me/593967488622" class="float-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Burger 69 Logo"> 
+            <span>BURGER 69</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#promos">Promos</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#quienes-somos">Quiénes Somos</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+        <button id="dark-mode-toggle" title="Modo Oscuro">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="carrusel-fondo">
+            <video src="img/video-fondo.mp4" autoplay muted loop playsinline></video>
+            <img src="img/fondo1.jpg" alt="Fondo 1">
+            <img src="img/fondo2.jpg" alt="Fondo 2">
+        </div>
+
+        <div class="hero-content">
+            <h1>PORQUE EL COMER TAMBIÉN ES UN <span class="text-orange">PLACER</span></h1>
+            <p>Tenemos el sabor que te domina. Las mejores hamburguesas a Carbón de Santa Ana.</p>
+            <a href="#menu" class="btn-main">Ver Menú</a>
+        </div>
+    </section>
+
+    <section id="promos" class="section-padding">
+        <h2 class="section-title">Promociones <span class="text-orange">Activas</span></h2>
+        <div class="promo-container">
+            <div class="promo-card">
+                <div class="promo-tag">GRATIS</div>
+                <div class="icon-promo"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Bebida Gratis</h3>
+                <p>Síguenos en nuestras 3 redes sociales (Facebook, Instagram, TikTok), muéstralo en caja y recibe una bebida personal gratis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section-padding bg-cream">
+        <h2 class="section-title">Nuestro <span class="text-orange">Menú</span></h2>
+        
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-category="todos">Todos</button>
+            <button class="tab-btn" data-category="hamburguesas">Hamburguesas</button>
+            <button class="tab-btn" data-category="sanduches">Sanduches</button>
+            <button class="tab-btn" data-category="pinchos">Pinchos</button>
+            <button class="tab-btn" data-category="bebidas">Bebidas</button>
+            <button class="tab-btn" data-category="combos">Combos</button>
+        </div>
+
+        <div class="menu-grid">
+            
+            <div class="menu-card" data-category="hamburguesas">
+                <div class="img-container"><img src="img/burger1.jpg" alt="Hamburguesa Standar"></div>
+                <div class="card-info">
+                    <h3>Hamburguesa Standar</h3>
+                    <p class="price">$3.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Hamburguesa Standar" data-desc="Mejores hamburguesas al carbón de Santa Ana." data-ingredientes="Pan, Carne 140g, Lechuga, Queso, Salsas" data-calorias="750 kcal" data-img="img/burger1.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Hamburguesa Standar', 3.50)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="hamburguesas">
+                <div class="img-container"><img src="img/burger2.jpg" alt="Hamburguesa Doble"></div>
+                <div class="card-info">
+                    <h3>Hamburguesa Doble</h3>
+                    <p class="price">$4.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Hamburguesa Doble" data-desc="Doble carne al carbón para doble placer." data-ingredientes="Pan, 2x Carne 140g, Queso, Tocino, Salsas" data-calorias="1050 kcal" data-img="img/burger2.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Hamburguesa Doble', 4.50)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="hamburguesas">
+                <div class="img-container"><img src="img/burger3.jpg" alt="Hamburguesa Triple"></div>
+                <div class="card-info">
+                    <h3>Hamburguesa Triple</h3>
+                    <p class="price">$5.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Hamburguesa Triple" data-desc="El reto final al carbón." data-ingredientes="Pan, 3x Carne 140g, Queso, Tocino, Jamón" data-calorias="1350 kcal" data-img="img/burger3.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Hamburguesa Triple', 5.50)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sanduches">
+                <div class="img-container"><img src="img/sanduche-pollo.jpg" alt="Sanduche Pollo"></div>
+                <div class="card-info">
+                    <h3>Sanduche de Pollo</h3>
+                    <p class="price">$2.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Sanduche de Pollo" data-desc="Pollo desmenuzado con toque secreto." data-ingredientes="Pan, Pollo, Mayonesa, Lechuga" data-calorias="400 kcal" data-img="img/sanduche-pollo.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Sanduche de Pollo', 2.50)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sanduches">
+                <div class="img-container"><img src="img/sanduche-cubano.jpg" alt="Sanduche Cubano"></div>
+                <div class="card-info">
+                    <h3>Sanduche Cubano</h3>
+                    <p class="price">$3.00</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Sanduche Cubano" data-desc="La mezcla perfecta." data-ingredientes="Pan, Jamón, Cerdo, Pepinillos, Mostaza" data-calorias="550 kcal" data-img="img/sanduche-cubano.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Sanduche Cubano', 3.00)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="sanduches">
+                <div class="img-container"><img src="img/sanduche-queso.jpg" alt="Sanduche Queso"></div>
+                <div class="card-info">
+                    <h3>Sanduche de Queso</h3>
+                    <p class="price">$2.00</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Sanduche de Queso" data-desc="Simple y delicioso." data-ingredientes="Pan, Doble Queso Manaba, Mantequilla" data-calorias="350 kcal" data-img="img/sanduche-queso.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Sanduche de Queso', 2.00)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="pinchos">
+                <div class="img-container"><img src="img/pincho.jpg" alt="Pincho Pollo"></div>
+                <div class="card-info">
+                    <h3>Pincho de Pollo</h3>
+                    <p class="price">$2.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Pincho de Pollo" data-desc="Asado al carbón." data-ingredientes="Pollo, Pimiento, Cebolla, Papa" data-calorias="200 kcal" data-img="img/pincho.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Pincho de Pollo', 2.50)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="menu-card" data-category="pinchos">
+                <div class="img-container"><img src="img/pincho-molleja.jpg" alt="Pincho Molleja"></div>
+                <div class="card-info">
+                    <h3>Pincho de Molleja</h3>
+                    <p class="price">$2.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Pincho de Molleja" data-desc="Crujientes al carbón." data-ingredientes="Mollejas, Adobo, Papa, Ensalada" data-calorias="300 kcal" data-img="img/pincho-molleja.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Pincho de Molleja', 2.50)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="bebidas">
+                <div class="img-container"><img src="img/bebida.jpg" alt="Cola Personal"></div>
+                <div class="card-info">
+                    <h3>Cola Personal</h3>
+                    <p class="price">$0.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Cola Personal" data-desc="Refrescante para uno." data-ingredientes="Gaseosa Personal (Varios Sabores)" data-calorias="150 kcal" data-img="img/bebida.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Cola Personal', 0.50)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="bebidas">
+                <div class="img-container"><img src="img/cola-familiar.jpg" alt="Colas Familiares"></div>
+                <div class="card-info">
+                    <h3>Colas Familiares</h3>
+                    <p class="price">$1.00 - $1.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Colas Familiares" data-desc="Para compartir." data-ingredientes="1 Litro ($1.00) | 1.25 Litros ($1.50)" data-calorias="Variado" data-img="img/cola-familiar.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Cola Familiar 1L', 1.00)">1L ($1.00)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="bebidas">
+                <div class="img-container"><img src="img/batido.jpg" alt="Batidos"></div>
+                <div class="card-info">
+                    <h3>Batidos</h3>
+                    <p class="price">$1.75</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Batidos" data-desc="Hechos con leche." data-ingredientes="Sabores: Oreo, Fresa, Mora" data-calorias="400 kcal" data-img="img/batido.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Batido', 1.75)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="bebidas">
+                <div class="img-container"><img src="img/jugo.jpg" alt="Jugos"></div>
+                <div class="card-info">
+                    <h3>Jugos Naturales</h3>
+                    <p class="price">$1.00</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Jugos Naturales" data-desc="Fruta natural." data-ingredientes="Sabores: Limonada, Té Helado, Maracuyá" data-calorias="120 kcal" data-img="img/jugo.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Jugo Natural', 1.00)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" data-category="combos">
+                <div class="img-container"><img src="img/combo.jpg" alt="Combo Burger"></div>
+                <div class="card-info">
+                    <h3>Combo Burger</h3>
+                    <p class="price">$4.50</p>
+                    <div class="card-buttons">
+                        <button class="btn-detalle" data-name="Combo Burger" data-desc="El clásico." data-ingredientes="Hamburguesa Standar + Papas + Cola" data-calorias="900 kcal" data-img="img/combo.jpg"><i class="fas fa-eye"></i></button>
+                        <button class="btn-add" onclick="agregarAlCarrito('Combo Burger', 4.50)">Agregar <i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="section-padding">
+        <div class="about-container">
+            <div class="about-text" style="width: 100%;">
+                <img src="img/logo.png" alt="Logo Burger 69" class="about-logo">
+                <h2>Quiénes Somos</h2>
+                <div class="divider"></div>
+                <p>Arrancamos este sueño en el <strong>2025</strong> en Santa Ana, con un carrito pequeño pero con el corazón gigante. Empezamos siendo pocos, pero con la convicción de ofrecer el verdadero sabor al carbón que faltaba en la ciudad.</p>
+                <p>Somos jóvenes emprendedores, somos estudiantes como tú, y entendemos que comer rico no tiene que ser un lujo. Gracias por ser parte de nuestro crecimiento.</p>
+                
+                <div class="about-icons">
+                    <div class="icon-item"><i class="fas fa-fire"></i><span>Desde 2025</span></div>
+                    <div class="icon-item"><i class="fas fa-users"></i><span>Familia</span></div>
+                    <div class="icon-item"><i class="fas fa-laugh-beam"></i><span>Pasión</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="section-padding bg-cream">
+        <h2 class="section-title">¿Cómo <span class="text-orange">Llegar?</span></h2>
+        <div class="video-container-full">
+            <video src="img/video-local.mp4" autoplay muted loop playsinline controls></video>
+        </div>
+    </section>
+
+    <section id="mision-vision" class="section-padding">
+        <div class="mv-grid">
+            <div class="mv-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Nuestra Misión</h3>
+                <p>Ofrecer las mejores hamburguesas al carbón de Santa Ana, utilizando ingredientes frescos y brindando un servicio que haga sentir a cada cliente como en casa.</p>
+            </div>
+            <div class="mv-card">
+                <i class="fas fa-eye"></i>
+                <h3>Nuestra Visión</h3>
+                <p>Ser reconocidos en todo Manabí como el punto de encuentro favorito para amigos y familias, manteniendo nuestra esencia artesanal y calidad humana.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Burger 69. Santa Ana, Ecuador.</p>
+        <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=100064302721587&locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/burger____69/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@burger69alcarbon" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/593967488622" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p class="footer-phone">Pedidos: 0967 488 622</p>
+    </footer>
+
+    <div id="boton-carrito" onclick="abrirCarrito()">
+        <i class="fas fa-shopping-basket"></i>
+        <span id="contador-carrito">0</span>
+    </div>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-content cart-content">
+            <span class="close-btn" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Pedido <i class="fas fa-utensils"></i></h2>
+            <div id="lista-carrito"><p class="carrito-vacio">Tu carrito está vacío ☹️</p></div>
+            <div class="cart-notes">
+                <label>Notas para el chef (Salsas, alergias, etc):</label>
+                <textarea id="notas-pedido" placeholder="Ej: La estándar sin cebolla, el batido sin azúcar..."></textarea>
+            </div>
+            <div class="cart-footer">
+                <h3>Total: $<span id="total-carrito">0.00</span></h3>
+                <button class="btn-whatsapp" onclick="enviarPedidoWhatsapp()"><i class="fab fa-whatsapp"></i> Enviar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-producto" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Imagen Producto">
+                <div class="modal-info">
+                    <h2 id="modal-title">Nombre del Producto</h2>
+                    <p id="modal-desc">Descripción</p>
+                    <div class="nutrition-box">
+                        <h4><i class="fas fa-utensils"></i> Detalles</h4>
+                        <ul>
+                            <li><strong>Ingredientes:</strong> <span id="modal-ing"></span></li>
+                            <li style="margin-top: 10px; border-top: 1px dashed #ccc; padding-top:5px;">
+                                <strong>Calorías:</strong> <span id="modal-cal"></span> | 
+                                <strong>Proteínas:</strong> <span id="modal-prot"></span> | 
+                                <strong>Grasas:</strong> <span id="modal-fat"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
